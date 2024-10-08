@@ -29,6 +29,7 @@ onMounted(() => {
         <input type="text" placeholder="Nama Di sini" v-model="name" />
       </h2>
     </section>
+
     <section class="create-todo">
       <h3>Buat ToDo</h3>
       <form @submit.prevent>
@@ -40,8 +41,29 @@ onMounted(() => {
         />
 
         <h4>Pilih Kategori</h4>
+
         <div class="options">
-          <label></label>
+          <label>
+            <input
+              type="radio"
+              name="category"
+              value="business"
+              v-model="input_category"
+            />
+            <span class="bubble_business"></span>
+            <div>BISNIS</div>
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="category"
+              value="personal"
+              v-model="input_category"
+            />
+            <span class="bubble_personal"></span>
+            <div>PRIBADI</div>
+          </label>
         </div>
       </form>
     </section>
